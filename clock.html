@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Author" content="LEmon">
+		<title>Clock</title>
+		<style>
+			html, body{
+				height: 100%;
+			}
+			
+			body{
+				background: #0f3854;
+				background: radial-gradient(ellipse at center, #0a2e38 0%, #000 70%);
+				background-size: 100%;
+			}
+			
+			p{
+				margin: 0;
+				padding: 0;
+			}
+			
+			.clock{
+				text-align: center;
+				padding-top: 150px;
+				color: #daf6ff;
+				text-shadow: 0 0 20px #0aafe6;
+			}
+			
+			.time{
+				font-size: 50px;
+				padding: 5px 0;
+				letter-spacing: 5px;
+			}
+			
+			.date{
+				letter-spacing: 2px;
+				font-size: 16px;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="clock">
+			<p class="date">
+				<span id = "date"> 2022-12-01</span>
+				<span id = "week">Saturday</span>
+			</p>
+			<p class="time">
+				<span id = "time">
+					18:00:00
+				</span>
+			</p>
+		</div>
+		<script>
+			let weekArr = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday", "Saturday"];
+			// add zero
+			function addZero (num) {
+				if (num >= 10) {
+					return num;
+				} else {
+					return "0" + num;
+				}
+			}
+			
+			let dateDom = document.getElementById("date");
+			let weekDom = document.getElementById("week");
+			let timeDom = document.getElementById("time");
+			
+			//update ime
+			function updateTime() {
+				let now = new Date();
+				let date = now.getFullYear() + "-" + addZero(now.getMonth() + 1) + "-"+ addZero(now.getDate());
+				let week = weekArr[now.getDay()];
+				let time = addZero(now.getHours()) + ":" + addZero(now.getMinutes()) + ":" + addZero(now.getSeconds()); 
+				setText(dateDom, date);
+				setText(weekDom, week);
+				setText(timeDom, time);
+			}
+			
+			// update every second
+			function setText(dom,text) {
+				dom.innerText = text;
+			}
+			setInterval(updateTime, 1000);
+			updateTime();
+		</script> 
+	</body>
+</html>

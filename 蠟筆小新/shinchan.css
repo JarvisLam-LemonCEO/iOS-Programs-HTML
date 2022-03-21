@@ -1,0 +1,370 @@
+html{
+	font-size: 10px;
+}
+body{
+	background: #c0bae6;
+}
+
+.main-box{
+	width: 24rem;
+	height: 31rem;
+	margin: 5rem auto;
+	position: relative;
+}
+
+.head{
+	width: 11rem;
+	height: 6rem;
+	margin: 0 auto;
+	background: #000;
+	border-top-left-radius: 6rem;
+	border-top-right-radius: 10rem;
+	position: relative;
+}
+
+.face{
+	width: 12rem;
+	height: 6rem;
+	position: absolute;
+	top: 3.7rem;
+	left: -2.4rem;
+	border: 0.1rem solid #000;
+	background: #ffc7ae;
+	border-radius: 5rem;
+	transform: rotate(342deg);
+	border-bottom-left-radius: 8rem 6rem;
+	z-index: 100;
+}
+
+.face:before{
+	content: '';
+	position: absolute;
+	width: 10rem;
+	height: 6rem;
+	background: #ffc7ae;
+	top: -2.6rem;
+	left: 3.6rem;
+	transform: rotate(21deg);
+	border-top-left-radius: 4rem;
+	border-top-right-radius: 6rem 4rem;
+}
+
+.face:after{
+	content: '';
+	position: absolute;
+	background: #ffc7ae;
+	width: 3rem;
+	height: 3rem;
+	right: -2rem;
+	top: 2.3rem;
+	border-radius: 0.8rem 2.4rem 0.8rem 1rem/0.8rem 2.4rem 0.8rem 1rem;
+	transform: rotate(60deg);
+	border: 0.1rem solid #000;
+}
+
+.ear-clear{
+	width: 3rem;
+	height: 2.8rem;
+	border-radius: 100%;
+	position: absolute;
+	background: #ffc7ae;
+	top: 2.5rem;
+	left: 10rem;
+	z-index:2;
+}
+
+.eye{
+	width: 3.2rem;
+	height: 3rem;
+	background: #000;
+	position: absolute;
+	left: 4.3rem;
+	top: -0.6rem;
+	border-radius: 50%;
+	z-index: 4;
+	transform: rotate(18deg);
+}
+
+.eye.right{
+	left: unset;
+	right: 0.5rem;
+	top: 0.3rem;
+}
+
+.eye:before{
+	content: '';
+	width: 1rem;
+	height: 0.9rem;
+	background: #fff;
+	border-radius: 50%;
+	left: 40%;
+	top: 40%;
+	position: absolute;
+}
+
+.eye.right:before{
+	top: 35%;
+	left: 35%;
+}
+
+.eyebrow{
+	width: 3.4rem;
+	height: 5.4rem;
+	position: absolute;
+	z-index: 5;
+	top: -1.6rem;
+	left: 4rem;
+	border-radius: 50%;
+	border: 0.2rem solid #333;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+}
+
+.eyebrow.right{
+	width: 4.4rem;
+	height: 8.4rem;
+	top: -1.6rem;
+	left: unset;
+	right: 1rem;
+	transform: rotate(31deg);
+	top: -1.4rem;
+}
+
+.mouth{
+	width: 1rem;
+	height: 1rem;
+	position: absolute;
+	left: 3rem;
+	bottom: -0.7rem;
+	border: 0.2rem solid #000;
+	border-radius: 50%;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+}
+
+.eyebrow-big{
+	width: 2.2rem;
+	height: 0.8rem;
+	position: absolute;
+	left: 1rem;
+	top: 1.2rem;
+	background: #000;
+	transform: rotate(323deg);
+	border-radius: 1rem 1rem/1rem;
+	z-index: 101;
+}
+
+.eyebrow-big:before{
+	content: '';
+	display: block;
+	width: 1.6rem;
+	height: 0.8rem;
+	border-radius: 1rem;
+	background: #000;
+	top: 0.7rem;
+	right: -0.5rem;
+	position: absolute;
+	transform: rotate(87deg);
+}
+
+.eyebrow-big.right{
+	left: unset;
+	top: 0.8rem;
+	right: 3.5rem;
+}
+
+.clothes{
+	width: 8rem;
+	height: 9rem;
+	background: #c40e24;
+	position: absolute;
+	left: 30%;
+	top: 9rem;
+	border-radius: 1rem;
+	z-index: 80;
+	border: 0.1rem solid #000;
+	transform: skewX(-5deg);
+}
+
+.sleeve{
+	width: 2.2rem;
+	height: 4rem;
+	background: #c40e24;
+	position: absolute;
+	left: -1.5rem;
+	top: 0;
+	border-radius: 1rem;
+	border: 0.1rem solid #000;
+	border-right-color: transparent;
+	transform: rotate(15deg);
+}
+
+.sleeve.after{
+	width: 0.1rem;
+	height: 1rem;
+	background: #000;
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0.35rem;
+	transform: rotate(-8deg);
+}
+
+.sleeve-right{
+	width: 3.2rem;
+	height: 4rem;
+	background: #c40e24;
+	position: absolute;
+	right: -1.3rem;
+	top: -0.4rem;
+	border-radius: 0.3rem;
+	border: 0.1rem solid #000;
+	transform: skewX(14deg) skewY(9deg);
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+	z-index: 9;
+}
+
+.sleeve-right:after{
+	width: 2rem;
+	height: 2.1rem;
+	border: 0.1rem solid #000;
+	content: '';
+	position: absolute;
+	left: 0.2rem;
+	bottom: -0.3rem;
+	background: #c40e24;
+	border-top-color: transparent;
+	border-right-color: transparent;
+	transform: skewX(352deg) skewY(343deg);
+}
+
+.arm{
+	width: 1.2rem;
+	height: 4rem;
+	background: #ffaf9c;
+	position: absolute;
+	left: 25%;
+	top: 12rem;
+	border: 0.1rem solid #000;
+}
+
+.hand{
+	width: 1.5rem;
+	height: 1.4rem;
+	background: #ffaf9c;
+	border-radius: 0.7rem 0.9rem;
+	position: absolute;
+	left: -0.2rem;
+	border: 0.1rem solid #000;
+	bottom: -1rem;
+	border-top-color: transparent;
+}
+
+.arm-right{
+	width: 1.1rem;
+	height: 3.2rem;
+	background: #ffaf9c;
+	position: absolute;
+	right: -17%;
+	top: 3.4rem;
+	border: 0.1rem solid #000;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	transform: rotate(343deg);
+}
+
+.arm-right:before{
+	content: '';
+	width: 1.1rem;
+	height: 3.2rem;
+	background: #ffaf9c;
+	position: absolute;
+	right: -0.4rem;
+	top: 0;
+	border: 0.1rem solid #000;
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+	transform: rotate(12deg);
+	
+}
+
+.trousers{
+	width: 4rem;
+	height: 2.3rem;
+	background: #fafc8e;
+	border: 0.1rem solid #000;
+	border-right-color: transparent;
+	position: absolute;
+	top: 17.8rem;
+	left: 30%;
+	transform: skew(349deg, 1deg);
+	z-index: 5;
+}
+
+.trousers.right{
+	transform: skew(-349deg, -1deg);
+	left: 45%;
+	border: 0.1rem solid #000;
+	border-left-color: transparent;
+}
+
+.trousers.right:after{
+	width: 1rem;
+	height: 1rem;;
+	border-right: 0.1rem solid #000;
+	content: '';
+	position: absolute;
+	left: -1rem;
+	bottom: 0.1rem;
+}
+
+.leg{
+	width: 1.8rem;
+	height: 2.3rem;
+	background: #fec8ae;
+	position: absolute;
+	top: 20rem;
+	left: 34%;
+	z-index: 4;
+	border: 0.1rem solid #000;
+}
+
+.leg.right{
+	left: 51%;
+}
+
+.socks{
+	width: 1.8rem;
+	height: 1.0rem;
+	border-radius: 0.3rem;
+	background: #fff;
+	position: absolute;
+	top: 22rem;
+	left: 34%;
+	z-index: 5;
+	border: 0.1rem solid #000;
+}
+
+.socks.right{
+	left: 51%;
+}
+
+.shoes{
+	width: 3rem;
+	height: 0.8rem;	
+	background: #f6d47e;
+	position: absolute;
+	border-radius: 0.7rem 1rem 1rem 2rem/0.7rem 1rem 1rem 1rem;
+	border: 0.1rem solid #000;
+	transform: rotate(-6deg);
+	left: 29%;
+	top: 23rem;
+}
+
+.shoes.right{
+	left: 51%;
+	transform: rotate(4deg);
+}
