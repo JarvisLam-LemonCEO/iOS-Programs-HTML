@@ -21,17 +21,16 @@ void bubbleSort( int a[],  int n){
 
 // Insertion sort
 void insertionSort( int arr[],  int n){
-         int i, key, j;
-        for (int i = 1; i < n; i++) {
-                int key = arr[i];
-                int j = i - 1;
-
-                while (j >= 0 && arr[j] > key) {
-                        arr[j + 1] = arr[j];
-                        j = j - 1;
-                }
-                arr[j + 1] = key;
-        }
+  for (int i = 1; i < n; i++) {
+    int key = arr[i];
+    int j = i - 1;
+    
+    while (j >= 0 && arr[j] > key) {
+      arr[j + 1] = arr[j];
+      j = j - 1;
+    }
+    arr[j + 1] = key;
+  }
 }
 
 // Selection sort
@@ -135,6 +134,8 @@ int main(int argc, char *argv[]){
   // let n = 10,000 items
   int size = 10000;
   
+  string ms = "ms";
+  
   double bubbleSortTime;
   double insertionSortTime;
   double selectionSortTime;
@@ -195,13 +196,13 @@ int main(int argc, char *argv[]){
   end = clock();
   selectionSortTime = end - start;
   
-  
   // print the report on the time taken by each algorithm to sort the list
-  cout << "The time taken by Bubble sort: " << bubbleSortTime << endl;
-  cout << "The time taken by Insertion sort: " << insertionSortTime << endl;
-  cout << "The time taken by Selection sort: " << selectionSortTime << endl;
-  cout << "The time taken by Merge Sort: " << mergeSortTime << endl;
-  cout << "The time taken by Quick sort: " << quickSortTime << endl;
+  cout << "The Time Taken Report" << endl;
+  cout << "The time taken by Bubble sort: " << bubbleSortTime << ms << endl;
+  cout << "The time taken by Insertion sort: " << insertionSortTime << ms << endl;
+  cout << "The time taken by Selection sort: " << selectionSortTime << ms << endl;
+  cout << "The time taken by Merge Sort: " << mergeSortTime << ms << endl;
+  cout << "The time taken by Quick sort: " << quickSortTime << ms << endl;
   
   return 0;
 }
